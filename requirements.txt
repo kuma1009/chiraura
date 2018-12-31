@@ -20,7 +20,6 @@ kiwisolver==1.0.1
 matplotlib==3.0.0
 neuralnet==0.1.0
 nulltype==2.3.1
-numpy==1.15.4+mkl
 options==1.4.8
 pbr==4.3.0
 Pillow==5.3.0
