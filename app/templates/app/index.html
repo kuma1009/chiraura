@@ -1,0 +1,18 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<a class="btn" href="{% url 'app:new_memo' %}"><img src="{% static "app/image/memo.svg"%}" alt="書く">書く</a>
+
+{% for memo in memos %}
+<!--<a href="{% url 'app:detail' memo.id %}" class="memo-title">-->
+<a class="memo-title">
+  <div>
+    {{ memo.text | linebreaks | urlize }}
+    <span class="updated_datetime">{{ memo.updated_datetime }}</span>
+  </div>
+</a>
+{% endfor %}
+
+{% endblock %}
